@@ -1,0 +1,44 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#img-header{
+    width: 80px;
+}
+
+#cart-icon{
+    font-size: 30px;
+}
+
+.cart{
+    position: relative;
+}
+
+.cart-counter{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 18px;
+    bottom: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    border: 2px solid black;
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+}
+
+li{
+    list-style: none;
+}
