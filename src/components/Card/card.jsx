@@ -8,10 +8,12 @@ function Card({ add, prod }) {
                 <p>{prod.title}</p>
             </div>
             <div className="button">
-                <button onClick={() => {
-                    add(prod)
-                    console.log(prod)
-                }} className="product-button">Añadir al carrito</button>
+                <button className="product-button"
+                    onClick={() => {
+                        add(prod)
+                        console.log(prod)
+                     }}
+                    >Añadir al carrito</button>
             </div>
         </div>
         )
