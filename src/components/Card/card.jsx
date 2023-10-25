@@ -7,6 +7,9 @@ function Card({ add, prod }) {
             <div className="product-title">
                 <p>{prod.title}</p>
             </div>
+            <div className="product-price">
+            <p>$ {prod.price}</p>
+            </div>
             <div className="button">
                 <button className="product-button"
                     onClick={() => {

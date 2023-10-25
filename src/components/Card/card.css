@@ -3,14 +3,18 @@
 .prod-image{
     width: 250px;
     height: 250px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .card-container{
     width: 250px;
-    border: 1px solid black;
     border-radius: 0px;
-    background-color: #c9baa8;
+    background-color: #143966;
+    border-radius: 10px;
+    border: 2px solid #143966;
+    color: white;
 }
 
 .button{
@@ -20,11 +24,18 @@
 }
 
 .product-title{
-    height: 100px;
+    height: 75px;
+    padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
     display: flex;
     justify-content: center;
+}
+
+.product-price{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 .product-button{
