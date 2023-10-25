@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import Header from "../../Header/header";
 import Card from "../../Card/card";
+import './welcome.css'
 
 function Welcome() {
     
@@ -20,10 +21,12 @@ function Welcome() {
 
     return ( 
         <Fragment>       
-            <Header cart={cart}/>      
-            {data.map((prod) => {
-                return <Card add={handleClick} prod={prod} key={prod.id}/>
-            })}
+            <Header cart={cart} />
+            <section className="cards">
+                {data.map((prod) => {
+                    return <Card add={handleClick} prod={prod} key={prod.id}/>
+                })}
+            </section>
         </Fragment>
      );
 }

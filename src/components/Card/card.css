@@ -1,3 +1,35 @@
-img{
-    width: 200px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+.prod-image{
+    width: 250px;
+    height: 250px;
+    border-bottom: 1px solid black;
+}
+
+.card-container{
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: #c9baa8;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.product-title{
+    height: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
