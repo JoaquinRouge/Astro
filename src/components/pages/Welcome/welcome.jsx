@@ -3,28 +3,14 @@ import Header from "../../Header/header";
 import Card from "../../Card/card";
 import './welcome.css'
 
-function Welcome() {
+function Welcome({data,cart,addToCartFc}) {
     
-    const [data,setData] = useState ([])
-
-    fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json => setData(json))
-    
-        
-    const [ cart, setCart] =  useState ([])
-
-    const handleClick = (prod) => {
-        let CartUpdate = [...cart, prod]
-        setCart(CartUpdate)
-    }
-
     return ( 
         <Fragment>       
-            <Header cart={cart} />
+            <Header counter={cart}/>
             <section className="cards">
                 {data.map((prod) => {
-                    return <Card add={handleClick} prod={prod} key={prod.id}/>
+                    return <Card add={addToCartFc} prod={prod} key={prod.id}/>
                 })}
             </section>
         </Fragment>

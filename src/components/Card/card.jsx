@@ -1,6 +1,6 @@
 import "./card.css"
 
-function Card({ add, prod }) {
+function Card({ add, prod}) {
     return (
         <div className="card-container">
             <img src={prod.image} alt="product image" className="prod-image" />
