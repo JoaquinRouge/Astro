@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "../pages/login/login";
 import Welcome from "../pages/Welcome/welcome";
 import Cart from "../pages/Cart/cart";
@@ -9,9 +9,11 @@ function Router() {
     const [data,setData] = useState ([])
     const [cart, setCart] = useState([])
 
-    fetch('https://fakestoreapi.com/products')
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(json => setData(json))
+    },[]) 
     
         
     const [counter, setCounter] = useState([])
