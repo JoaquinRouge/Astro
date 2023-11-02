@@ -4,16 +4,13 @@
     width: 250px;
     height: 250px;
     border-bottom: 1px solid rgb(227, 227, 227);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
 }
 
 .card-container{
     width: 250px;
     border-radius: 0px;
     background-color: #143966;
-    border-radius: 10px;
-    border: 2px solid #143966;
+    border: 3px solid #143966;
     color: white;
 }
 

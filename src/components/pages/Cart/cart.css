@@ -42,3 +42,15 @@
 .quantity-prod{
     font-family: 'Montserrat', sans-serif;
 }
+
+.cartEmpty{
+    display: flex;
+    position: absolute;
+    left: 600px;
+    top: 350px;
+    background-color: #143966;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}

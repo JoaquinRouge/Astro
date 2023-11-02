@@ -20,13 +20,12 @@ function Cart({ cart, removeItemFromCart, }) {
     
     const groupedProductArray = Object.values(groupedProducts);
     
-    
     return (
         <Fragment>
             <Header counter={cart}/>
             <ul className="section-cart">
+                {cart.length === 0 ? (<p className="cartEmpty">No has agregado ningun producto al carrito</p>):""}
                 {groupedProductArray.map((item) => (
-                    
                         <div key={item.id} className="product-added">
                             <div className="img-prod">
                                 <img className="cart-prod-img" src={item.image} alt="product" />

@@ -22,7 +22,6 @@ function Router() {
         const existingProductIndex = cart.findIndex((item) => item.id === prod.id)
 
         if (existingProductIndex !== -1) {
-
             setCart([...cart])
         }
         else {
