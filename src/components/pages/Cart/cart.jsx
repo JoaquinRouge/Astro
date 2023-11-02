@@ -8,11 +8,24 @@ function Cart({ cart, removeItemFromCart, }) {
         removeItemFromCart(itemId);
       };
 
+      const groupedProducts = cart.reduce((acc, product) => {
+        if (acc[product.id]) {
+
+            acc[product.id].quantity += 1;
+        } else {
+            acc[product.id] = { ...product };
+        }
+        return acc;
+    }, {});
+    
+    const groupedProductArray = Object.values(groupedProducts);
+    
+    
     return (
         <Fragment>
             <Header counter={cart}/>
             <ul className="section-cart">
-                {cart.map((item) => (
+                {groupedProductArray.map((item) => (
                     
                         <div key={item.id} className="product-added">
                             <div className="img-prod">
@@ -23,6 +36,9 @@ function Cart({ cart, removeItemFromCart, }) {
                             </div>
                             <div className="price-prod">    
                                 <p> $ {item.price}</p>
+                        </div>
+                             <div className="quantity-prod">
+                                 Cantidad: {item.quantity}
                             </div>
                             <button className="cart-button" onClick={() => handleRemoveItem(item.id)}>Eliminar</button>
                         </div>         

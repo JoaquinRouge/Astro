@@ -19,6 +19,17 @@ function Router() {
     const [counter, setCounter] = useState([])
     
     const addToCart = (prod) => {
+        const existingProductIndex = cart.findIndex((item) => item.id === prod.id)
+
+        if (existingProductIndex !== -1) {
+
+            setCart([...cart])
+        }
+        else {
+            prod.quantity = 1
+            setCart([...cart,prod])
+        }
+
         setCart([...cart, prod])
 
     }
@@ -32,7 +43,7 @@ function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />}></Route>
-                <Route path="/Welcome" element={<Welcome data={data} cart={cart} addToCartFc={addToCart} />}></Route>
+                <Route path="/Welcome" element={<Welcome data={data} cart={cart} addToCart={addToCart} />}></Route>
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart}/>}></Route>
             </Routes>
         </BrowserRouter>
