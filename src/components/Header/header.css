@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
 
 header{
     display: flex;
@@ -11,7 +11,7 @@ header{
     top: 0px;
     background-color: #143966;
     border-bottom: 1px solid black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans Linear B', sans-serif;
     color: white;
 }
 

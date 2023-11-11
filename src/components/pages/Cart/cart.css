@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
 
 .section-cart{
     display: flex;
@@ -13,6 +13,10 @@
     height: 100px;
 }
 
+.p-price{
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
 .product-added{
     display: flex;
     flex-direction: row;
@@ -21,6 +25,7 @@
     background-color: rgb(220, 220, 224);
     padding: 15px;
     border-radius: 20px;
+    font-family: 'Noto Sans Linear B', sans-serif;
 }
 
 .titlep{
@@ -28,29 +33,38 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 250px;
+    font-family: 'Noto Sans Linear B', sans-serif;
 }
 
 .cart-button{
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans Linear B', sans-serif;
     background-color: #143966;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .quantity-prod{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans Linear B', sans-serif;
 }
 
 .cartEmpty{
     display: flex;
     position: absolute;
-    left: 600px;
+    left: 555px;
     top: 350px;
     background-color: #143966;
     padding: 30px;
     border-radius: 10px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    width: 450px;
+    text-align: center;
 }
+
+.total-price,.quantity-prod,.price-prod,.title-prod{
+    text-align: center;
+}
+
