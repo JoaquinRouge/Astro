@@ -5,6 +5,7 @@ function Card({ add, prod}) {
         <div className="card-container">
             <div className="prod-image">
                 <img src={prod.image} alt="imagen de producto" />
+                <hr className="hrcard" />
             </div>
             <div className="prod-price">
                 <p className="pepo">${prod.price}</p>
@@ -15,7 +16,7 @@ function Card({ add, prod}) {
                         add(prod)
                         console.log(prod)
                      }}
-                    ><i class="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
+                    ><i className="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
             </div>
         </div>
         )

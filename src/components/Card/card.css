@@ -10,6 +10,7 @@
 
 .prod-image{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -27,7 +28,6 @@
     margin-left: 10px;
     display: flex;
     justify-content: center;
-    padding: 10px;
     font-family: 'Noto Sans Linear B', sans-serif;
 }
 
@@ -49,4 +49,12 @@
     background-color: #143966;
     color: white;
     border-radius: 10px;
+}
+
+.hrcard{
+    background-color: #ebebeb;
+    height: 1px;
+    width: 240px;
+    margin: 10px;
+    border: none;
 }

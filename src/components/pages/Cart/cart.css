@@ -6,6 +6,7 @@
     margin-left: 50px;
     margin-top: 50px;
     width: 800px;
+    gap: 15px;
 }
 
 .cart-prod-img{
@@ -67,5 +68,10 @@
 
 .total-price,.quantity-prod,.price-prod,.title-prod{
     text-align: center;
+}
+
+
+.red{
+    pointer-events: none;
 }
 
