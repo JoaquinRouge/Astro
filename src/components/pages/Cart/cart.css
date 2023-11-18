@@ -5,8 +5,16 @@
     flex-direction: column;
     margin-left: 50px;
     margin-top: 50px;
-    width: 800px;
     gap: 15px;
+}
+
+.container-main-cart{
+    display: flex;
+    gap: 200px;
+}
+
+.main-container-cart{
+    display: flex;
 }
 
 .cart-prod-img{
@@ -28,13 +36,14 @@
     padding: 15px;
     border-radius: 20px;
     font-family: 'Noto Sans Linear B', sans-serif;
+    width: 800px;
 }
 
 .titlep{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 250px;
+    max-width: 150px;
     font-family: 'Noto Sans Linear B', sans-serif;
 }
 
@@ -75,3 +84,53 @@
     pointer-events: none;
 }
 
+.end-buy{
+    width: 350px;
+    height: 230px;
+    background-color: rgb(220, 220, 224);
+    margin: 50px;
+    margin-left: 160px;
+    border-radius: 15px;
+    position: sticky;
+    top: 120px;
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.end-buy-title{
+    padding: 10px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.hr-cart{
+    background-color: #fffefe;
+    height: 1px;
+    margin: 2px;
+    border: none;
+}
+
+.end-buy-products,.end-buy-total{
+    display: flex;
+    justify-content:space-between;
+    margin:15px;
+}
+
+.button-end-buy{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 60px;
+}
+
+.end-buy-button{
+    padding: 15px;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    font-size: 14px;
+    background-color: #143966;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}

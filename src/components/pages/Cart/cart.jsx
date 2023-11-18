@@ -23,11 +23,12 @@ function Cart({ cart, removeItemFromCart, }) {
   
     return (
         <Fragment>
-            <Header counter={cart}/>
-            <div className="section-cart">
+            <Header counter={cart} />
+            <div className="main-container-cart">
+                <div className="section-cart">
                 {cart.length === 0 ? (<Link to="/Welcome"><p className="cartEmpty">No has agregado ningun producto al carrito, presiona este botón para dirigirte al lugar de compra</p></Link>):""}
-                {groupedProductArray.map((item) => (
-                        <div key={item.id} className="product-added">
+                    {groupedProductArray.map((item) => (
+                             <div key={item.id} className="product-added">
                             <div className="img-prod">
                                 <img className="cart-prod-img" src={item.image} alt="product" />
                             </div>
@@ -40,7 +41,6 @@ function Cart({ cart, removeItemFromCart, }) {
                                <div className="item-info"><p className="p-price">${item.price}</p></div>
                             </div>
                         <div className="quantity-prod">
-                            
                                 <div className="cardtitle-p">Cantidad</div>
                             <div id="quant" className="item-info">{item.quantity}</div> 
                             
@@ -50,9 +50,28 @@ function Cart({ cart, removeItemFromCart, }) {
                                 <div className="item-info"><p className="p-price">${item.price * item.quantity}</p></div>
                             </div>
                                 <button className="cart-button" onClick={() => handleRemoveItem(item.id)}>Eliminar</button>
-                    </div>         
+                            </div>        
                 ))}
                 </div>
+                {cart.length > 0 ?
+                    <div className="end-buy">
+                        <div className="end-buy-title">Resumen de compra</div>
+                        <hr className="hr-cart" />
+                        <div className="end-buy-products">
+                            <p>Productos ({cart.length})</p>
+                            <p>$ 0</p>
+                        </div>
+                        <div className="end-buy-total">
+                            <p>Total</p>
+                            <p>$ {}</p>
+                        </div>
+                        <div className="button-end-buy">
+                            <button className="end-buy-button">Continuar compra</button>
+                        </div>
+                    </div>
+                    : ""}
+            </div>
+            
     </Fragment> );
 }
 
