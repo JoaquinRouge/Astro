@@ -1,9 +1,26 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import "./cart.css"
 import Header from "../../Header/header";
 import { Link } from "react-router-dom";
 
 function Cart({ cart, removeItemFromCart, }) {
+
+    const [totalPrice, setTotalPrice] = useState(0)
+    
+    useEffect(() => {
+        calculateTotal()
+    })
+
+    const calculateTotal = () => {
+        const total = cart.reduce((acc, product) => {
+          return acc + product.price * product.quantity;
+        }, 0);
+
+        const roundedTotal = parseFloat(total.toFixed(2))
+
+        setTotalPrice(roundedTotal);
+    };
+        
 
     const handleRemoveItem = (itemId) => {
         removeItemFromCart(itemId);
@@ -58,12 +75,12 @@ function Cart({ cart, removeItemFromCart, }) {
                         <div className="end-buy-title">Resumen de compra</div>
                         <hr className="hr-cart" />
                         <div className="end-buy-products">
-                            <p>Productos ({cart.length})</p>
-                            <p>$ 0</p>
+                            <p className="end-buy-products">Productos ({cart.length})</p>
+                            <p className="end-buy-products">$ {totalPrice}</p>
                         </div>
                         <div className="end-buy-total">
-                            <p>Total</p>
-                            <p>$ {}</p>
+                            <p className="end-buy-total">Total</p>
+                            <p className="end-buy-total">$ {totalPrice}</p>
                         </div>
                         <div className="button-end-buy">
                             <button className="end-buy-button">Continuar compra</button>
