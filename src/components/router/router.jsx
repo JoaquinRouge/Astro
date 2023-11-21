@@ -43,7 +43,7 @@ function Router() {
             <Routes>
                 <Route path="/" element={<Login />}></Route>
                 <Route path="/Welcome" element={<Welcome data={data} cart={cart} addToCart={addToCart} />}></Route>
-                <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart}/>}></Route>
+                <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
             </Routes>
         </BrowserRouter>
      );

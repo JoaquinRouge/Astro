@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
+
+.pv{
+    color: black;
+}
+
+.ProductViewContainer{
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #143966;
+    padding: 20px;
+    width: 1200px;
+    height: 450px;
+}
+
+.close{
+    cursor: pointer;
+    font-size: 30px;
+    color: #143966;
+}
+
+.close-logo{
+    display: flex;
+    justify-content: end;
+}
+
+.ProductViewImage{
+    margin-left: 50px;
+}
+
+.PVimage{
+    width: 400px;
+    height: 400px;
+}
+
+.ProductviewMain{
+    display: flex;
+    gap: 200px;
+}
+
+.PVtitle{
+    font-family: 'Noto Sans Linear B', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.PVprice,.PVcategory,.PVstock{
+    font-size: 27px;
+    padding: 10px;
+    padding-left: 0;
+}
+
+.ProductViewInformation{
+    width: 500px;
+}
+
+.PVaddContainer{
+    margin-top: 20px;
+}
+
+.PVadd{
+    width: 150px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    background-color: #143966;
+    color: white;
+    border-radius: 10px;
+}

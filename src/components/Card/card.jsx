@@ -1,8 +1,20 @@
 import "./card.css"
+import { useState,Fragment } from "react"
+import ProductView from "../ProductView/productview"
 
-function Card({ add, prod}) {
+function Card({ add, prod }) {
+    
+    let [show, setShow] = useState(false)
+    const ShowInfoProd = () => {
+        setShow(true)
+    }
+
     return (
-        <div className="card-container">
+        <Fragment>
+            <div className="card-container">
+                <div className="prod-expand">
+                <i className="fa-solid fa-up-right-and-down-left-from-center expand" onClick={()=>setShow(true)}></i>
+                </div>
             <div className="prod-image">
                 <img src={prod.image} alt="imagen de producto" />
                 <hr className="hrcard" />
@@ -21,7 +33,10 @@ function Card({ add, prod}) {
                      }}
                     ><i className="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
             </div>
-        </div>
+            </div>
+                {show === true ? <ProductView setShow={setShow} title={prod.title} image={prod.image} price={prod.price} stock={prod.rating.count} category={prod.category} add={add} prod={prod}  />:''}   
+        </Fragment>
+            
         )
 }
 
