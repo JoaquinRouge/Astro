@@ -44,14 +44,15 @@
 
 .PVtitle{
     font-family: 'Noto Sans Linear B', sans-serif;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .PVprice,.PVcategory,.PVstock{
-    font-size: 27px;
+    font-size: 25px;
     padding: 10px;
     padding-left: 0;
+    font-family: 'Noto Sans Linear B', sans-serif;
 }
 
 .ProductViewInformation{
