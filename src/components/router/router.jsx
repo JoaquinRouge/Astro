@@ -15,9 +15,6 @@ function Router() {
             .then(json => setData(json))
     },[]) 
     
-        
-    const [counter, setCounter] = useState([])
-    
     const addToCart = (prod) => {
         const existingProductIndex = cart.findIndex((item) => item.id === prod.id)
 

@@ -2,9 +2,19 @@
 
 .card-container{
     width: 250px;
+    height: 350px;
     background-color: white;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
 }
 
 .prod-image{
@@ -17,27 +27,27 @@
 }
 
 .prod-image>img{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 }
 
 .prod-price{
     color: black;
-    font-size: 17px;
-    margin-left: 10px;
-    display: flex;
-    justify-content: center;
+    font-size: 23px;
     font-family: 'Noto Sans Linear B', sans-serif;
 }
 
-.pepo{
+.p-price{
     font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.container-tpb{
+margin-left: 15px;
 }
 
 .button{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .product-button{
@@ -58,19 +68,16 @@
     border: none;
 }
 
-.prod-title{
-    color: black;
-    text-align: center;
-}
-
 .prod-title-p{
     font-family: 'Noto Sans Linear B', sans-serif;
-    height: 50px;
+    font-size: 18px;
+    height: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-left: 15px;
     margin-right: 15px;
+    margin-top: 15px;
+    color: black;
 }
 
 .expand{

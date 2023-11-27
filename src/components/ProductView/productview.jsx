@@ -28,6 +28,7 @@ function ProductView({title,price,image,category,stock,setShow,add,prod}) {
                         <div className="PVaddContainer">
                             <button className="PVadd" onClick={() => {
                                 add(prod)
+                                console.log(prod)
                             }}><i className="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
                         </div>
                     </div>

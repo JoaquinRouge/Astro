@@ -20,7 +20,7 @@ function Welcome({data,cart,addToCart}) {
             <Header counter={cart} />
             {loading ? (
                 <div className="Loading">
-                    <p>Loading...</p>
+                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
 
             ) : (
