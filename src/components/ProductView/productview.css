@@ -64,12 +64,12 @@
 }
 
 .PVadd{
-    width: 150px;
-    padding: 15px;
+    width: 200px;
+    padding: 20px;
     border: none;
     cursor: pointer;
     font-family: 'Noto Sans Linear B', sans-serif;
+    font-size: 15px;
     background-color: #143966;
     color: white;
-    border-radius: 10px;
 }

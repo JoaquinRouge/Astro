@@ -10,7 +10,6 @@ header{
     position: sticky;
     top: 0px;
     background-color: #143966;
-    border-bottom: 1px solid black;
     font-family: 'Noto Sans Linear B', sans-serif;
     color: white;
 }
@@ -30,6 +29,8 @@ a{
 
 #cart-icon{
     font-size: 30px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
 }
 
 .cart{
@@ -37,7 +38,8 @@ a{
 }
 
 .cart-counter{
-    background-color: black;
+    background-color: red;
+    color: white;
     width: 20px;
     height: 20px;
     display: flex;
@@ -49,7 +51,11 @@ a{
     bottom: 20px;
     font-size: 12px;
     font-weight: 900;
-    border: 2px solid white;
+    border: 2px solid black;
+}
+
+.cart-counter-p{
+    font-family: 'Noto Sans Linear B', sans-serif;
 }
 
 ul{

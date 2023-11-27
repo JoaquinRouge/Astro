@@ -14,7 +14,7 @@ function Header({counter}) {
                 </ul>
             </div>
             <div className="cart">
-                <div className="cart-counter"><p>{counter.length}</p></div>
+                <div className="cart-counter"><p className="cart-counter-p">{counter.length}</p></div>
                  <Link to="/Cart"><i id="cart-icon" className="fa-solid fa-cart-shopping"></i></Link>
             </div>
         </header>
