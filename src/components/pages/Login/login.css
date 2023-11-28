@@ -23,6 +23,7 @@ body{
     height: 33px;
     border: none;
     padding-left: 10px;
+    border-radius: 5px;
 }
 
 .input:focus{
@@ -38,7 +39,7 @@ body{
     border: none;
     background-color: #143966;
     color: white;
-    border-radius: 20px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
