@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Login from "../pages/login/login";
+import Login from "../pages/Login/login";
 import Welcome from "../pages/Welcome/welcome";
 import Cart from "../pages/Cart/cart";
+import Prueba from "../pages/prueba/prueba";
+import Register from "../pages/Register/register";
 
 function Router() {
 
@@ -41,6 +43,8 @@ function Router() {
                 <Route path="/" element={<Login />}></Route>
                 <Route path="/Welcome" element={<Welcome data={data} cart={cart} addToCart={addToCart} />}></Route>
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
+                <Route path="/prueba" element={<Prueba />}></Route>
+                <Route path="/Register" element={<Register/>}></Route>
             </Routes>
         </BrowserRouter>
      );

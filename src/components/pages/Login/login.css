@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
 
 body{
     background-color: #ebebeb;
@@ -47,6 +48,29 @@ body{
     width: 650px;
 }
 
-p{
-    font-family: 'Raleway';
+.p-account{
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.span-register{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.span-register:hover{
+    color: #143966;
+}
+
+.linkreg{
+    color: black;
+}
+
+.eye-login{
+    position: absolute;
+    left: 893px;
+    top: 480px;
+    z-index: 999;
+    cursor: pointer;
+    color: #143966;
+    font-size: 20px;
 }

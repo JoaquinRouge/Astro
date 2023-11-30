@@ -10,7 +10,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border-radius: 2px;
+    border-radius: 5px;
     border: 2px solid #143966;
     padding: 20px;
     width: 1200px;
@@ -67,6 +67,7 @@
     width: 200px;
     padding: 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-family: 'Noto Sans Linear B', sans-serif;
     font-size: 15px;
