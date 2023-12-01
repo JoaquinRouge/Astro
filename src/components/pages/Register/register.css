@@ -70,10 +70,34 @@
 
 .eye{
     position: absolute;
-    left: 895px;
-    top: 425px;
+    left: 893px;
+    top: 453px;
     z-index: 999;
     cursor: pointer;
     color: #143966;
     font-size: 20px;
+}
+
+.header-register{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-register{
+    width: 50px;
+}
+
+.user-created-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.user-created{
+    background-color: #143966;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Noto Sans Linear B', sans-serif;
 }

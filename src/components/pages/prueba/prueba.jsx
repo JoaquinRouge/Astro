@@ -6,7 +6,7 @@ function Prueba() {
     const [menu, setMenu] = useState([])
 
     const traerInfo = async () => {
-        await fetch("http://localhost:4000/menu")
+        await fetch("http://localhost:4000/users")
             .then((res)=>{
                 return res.json()
             })
@@ -25,8 +25,8 @@ function Prueba() {
         <div>
             <h1>Prueba</h1>
             <ul>
-                {menu.map((menus) => {
-                    return <li key={menus._id}>{menus.nombrePlato}</li>
+                {menu.map((users) => {
+                    return <li key={users._id}>{users.email}</li>
                 })}
             </ul>
             <br />
