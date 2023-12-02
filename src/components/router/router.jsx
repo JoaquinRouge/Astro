@@ -5,6 +5,7 @@ import Welcome from "../pages/Welcome/welcome";
 import Cart from "../pages/Cart/cart";
 import Register from "../pages/Register/register";
 import Prueba from "../pages/prueba/prueba";
+import ProductView from "../pages/Product-View/productview";
 
 function Router() {
 
@@ -44,7 +45,8 @@ function Router() {
                 <Route path="/Welcome" element={<Welcome data={data} cart={cart} addToCart={addToCart} />}></Route>
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
                 <Route path="/Register" element={<Register />}></Route>
-                <Route path="/prueba" element={<Prueba/>}></Route>
+                <Route path="/prueba" element={<Prueba />}></Route>
+                <Route path="/product/:productId" element={<ProductView data={data} cart={cart} add={addToCart}/>}></Route>
             </Routes>
         </BrowserRouter>
      );

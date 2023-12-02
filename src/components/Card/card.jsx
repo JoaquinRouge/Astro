@@ -1,6 +1,7 @@
 import "./card.css"
 import { useState,Fragment } from "react"
-import ProductView from "../ProductView/productview"
+import ProductView from "../pages/Product-View/productview"
+import { Link } from "react-router-dom"
 
 function Card({ add, prod }) {
     
@@ -11,7 +12,8 @@ function Card({ add, prod }) {
 
     return (
         <Fragment>
-            <div className="card-container" onClick={()=>setShow(true)}>
+            <Link to={`/product/${prod.id}`}>
+             <div className="card-container" onClick={() => setShow(true)}>
             <div className="prod-image">
                 <img src={prod.image} alt="imagen de producto" />
                 <hr className="hrcard" />
@@ -23,11 +25,10 @@ function Card({ add, prod }) {
              <div className="prod-title">
                 <p className="prod-title-p">{prod.title}</p>
             </div> 
-                </div>
-    
-            
+                </div>    
             </div>
-                {show === true ? <ProductView setShow={setShow} title={prod.title} image={prod.image} price={prod.price} stock={prod.rating.count} category={prod.category} add={add} prod={prod}  />:''}   
+            </Link>
+       
         </Fragment>
             
         )
