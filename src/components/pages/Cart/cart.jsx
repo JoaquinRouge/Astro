@@ -27,11 +27,11 @@ function Cart({ cart, removeItemFromCart, }) {
       };
 
       const groupedProducts = cart.reduce((acc, product) => {
-        if (acc[product.id]) {
+        if (acc[product._id]) {
 
-            acc[product.id].quantity += 1;
+            acc[product._id].quantity += 1;
         } else {
-            acc[product.id] = { ...product };
+            acc[product._id] = { ...product };
         }
         return acc;
     }, {});
@@ -59,15 +59,15 @@ function Cart({ cart, removeItemFromCart, }) {
                             </div>
                         <div className="quantity-prod">
                                 <div className="cardtitle-p">Cantidad</div>
-                            <div id="quant" className="item-info">{item.quantity}</div> 
-                            
+                                <div id="quant" className="item-info">{item.quantity}</div> 
                             </div>
                         <div className="total-price">
                             <div className="cardtitle-p">Total</div>
                                 <div className="item-info"><p className="p-price">${item.price * item.quantity}</p></div>
                             </div>
-                                <button className="cart-button" onClick={() => handleRemoveItem(item.id)}>Eliminar</button>
-                            </div>        
+                                <button className="cart-button" onClick={() => handleRemoveItem(item._id)}>Eliminar</button>
+                        </div>       
+                        
                 ))}
                 </div>
                 {cart.length > 0 ?

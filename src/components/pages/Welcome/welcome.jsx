@@ -26,7 +26,7 @@ function Welcome({data,cart,addToCart}) {
             ) : (
                 <section className="cards">
                     {data.map((prod) => (
-                        <Card add={addToCart} prod={prod} key={prod.id} />
+                        <Card add={addToCart} prod={prod} key={prod._id} />
                     ))}
                 </section>
             )}

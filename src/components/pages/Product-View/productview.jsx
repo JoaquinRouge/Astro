@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function ProductView({ data , cart , add}) {
     
     const { productId } = useParams()
-    const prod = data.find(prod => prod.id === parseInt(productId));
+    const prod = data.find(prod => prod._id === productId);
 
     if (!prod) {
         return<div className="Loading">
@@ -36,7 +36,7 @@ function ProductView({ data , cart , add}) {
                             <p className="description-pv p">Descripción del producto: {prod.description}</p>
                         </div>
                         <div className="PV-Stock">
-                            <p className="stock-pv p">Stock: {prod.rating.count}</p>
+                            <p className="stock-pv p">Stock: {prod.stock}</p>
                         </div>
                         <button onClick={() => {
                             add(prod)

@@ -13,13 +13,13 @@ function Router() {
     const [cart, setCart] = useState([])
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        fetch('http://localhost:4000/products')
             .then(res=>res.json())
             .then(json => setData(json))
     },[]) 
     
     const addToCart = (prod) => {
-        const existingProductIndex = cart.findIndex((item) => item.id === prod.id)
+        const existingProductIndex = cart.findIndex((item) => item.id === prod._id)
 
         if (existingProductIndex !== -1) {
             setCart([...cart])
@@ -34,7 +34,7 @@ function Router() {
     }
 
     const removeItemFromCart = (prodID) => {
-        const updatedCart = cart.filter((prod) => prod.id !== prodID)
+        const updatedCart = cart.filter((prod) => prod._id !== prodID)
         setCart(updatedCart)
     }
 
@@ -46,7 +46,7 @@ function Router() {
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
                 <Route path="/Register" element={<Register />}></Route>
                 <Route path="/prueba" element={<Prueba />}></Route>
-                <Route path="/product/:productId" element={<ProductView data={data} cart={cart} add={addToCart}/>}></Route>
+                <Route path="/product/:productId/:productTitle" element={<ProductView data={data} cart={cart} add={addToCart}/>}></Route>
             </Routes>
         </BrowserRouter>
      );

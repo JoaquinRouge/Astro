@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import Form from "./form";
+import Card from "../../Card/card";
 
 function Prueba() {
 
-    const [menu, setMenu] = useState([])
+    const [products, setProducts] = useState([])
 
     const traerInfo = async () => {
-        await fetch("http://localhost:4000/users")
+        await fetch("http://localhost:4000/products")
             .then((res)=>{
                 return res.json()
             })
             .then((data) => {
-                setMenu(data)
+                setProducts(data)
             })
             .catch((err)=>{
                 console.log(err)
@@ -25,8 +26,8 @@ function Prueba() {
         <div>
             <h1>Prueba</h1>
             <ul>
-                {menu.map((users) => {
-                    return <li key={users._id}>{users.email}</li>
+                {products.map((prod) => {
+                    return <Card prod={prod}/>
                 })}
             </ul>
             <br />

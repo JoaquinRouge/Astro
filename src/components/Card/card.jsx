@@ -5,15 +5,10 @@ import { Link } from "react-router-dom"
 
 function Card({ add, prod }) {
     
-    let [show, setShow] = useState(false)
-    const ShowInfoProd = () => {
-        setShow(true)
-    }
-
     return (
         <Fragment>
-            <Link to={`/product/${prod.id}`}>
-             <div className="card-container" onClick={() => setShow(true)}>
+            <Link to={`/product/${prod._id}/${prod.title}`}>
+             <div className="card-container">
             <div className="prod-image">
                 <img src={prod.image} alt="imagen de producto" />
                 <hr className="hrcard" />
@@ -28,7 +23,6 @@ function Card({ add, prod }) {
                 </div>    
             </div>
             </Link>
-       
         </Fragment>
             
         )
