@@ -2,7 +2,7 @@
 
 .card-container{
     width: 350px;
-    height: 450px;
+    height: 500px;
     background-color: white;
     color: white;
     border-radius: 5px;
@@ -28,7 +28,7 @@
 
 .prod-image>img{
     width: 280px;
-    height: 280px;
+    height: 330px;
 }
 
 .prod-price{

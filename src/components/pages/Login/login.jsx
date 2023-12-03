@@ -16,7 +16,7 @@ function Login() {
                 </div>
                 <div className="inputs">
                     <input placeholder="Contraseña" className="input" type={showPwd === false ? "password" : "text"} />
-                    {showPwd === false ? <i class="fa-solid fa-eye-slash eye-login" onClick={()=>setShowPwd(!showPwd)}></i> : <i className="fa-solid fa-eye eye-login" onClick={()=>setShowPwd(!showPwd)}></i> }
+                    {showPwd === false ? <i className="fa-solid fa-eye-slash eye-login" onClick={()=>setShowPwd(!showPwd)}></i> : <i className="fa-solid fa-eye eye-login" onClick={()=>setShowPwd(!showPwd)}></i> }
                 </div>    
                 <Link to="/Welcome"><input className="btn-login" role="button" type="submit" value="Iniciar Sesión" /></Link>
                 <div className="register"><p className="p-account">¿No tenés una cuenta? <Link to="/Register" className="linkreg"><span className="span-register">Registrate</span></Link></p></div>
