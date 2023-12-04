@@ -43,7 +43,7 @@ function Cart({ cart, removeItemFromCart, }) {
             <Header counter={cart} />
             <div className="main-container-cart">
                 <div className="section-cart">
-                {cart.length === 0 ? (<Link to="/Welcome"><p className="cartEmpty">No has agregado ningun producto al carrito, presiona este botón para dirigirte al lugar de compra</p></Link>):""}
+                {cart.length === 0 ? (<Link to="/Remeras"><p className="cartEmpty">No has agregado ningun producto al carrito, presiona este recuadro para dirigirte al lugar de compra</p></Link>):""}
                     {groupedProductArray.map((item) => (
                              <div key={item.id} className="product-added">
                             <div className="img-prod">

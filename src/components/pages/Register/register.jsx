@@ -1,6 +1,6 @@
 import { Fragment , useState } from "react";
 import './register.css'
-import image from '../../../assets/images/logo-min.png'
+import image from '../../../assets/images/logo-bg-white.png'
 
 function Register() {
 

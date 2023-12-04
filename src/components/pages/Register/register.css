@@ -62,7 +62,7 @@
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     border: none;
-    background-color: #143966;
+    background-color: black;
     color: white;
     border-radius: 7px;
     cursor: pointer;
@@ -74,7 +74,7 @@
     top: 453px;
     z-index: 999;
     cursor: pointer;
-    color: #143966;
+    color: black;
     font-size: 20px;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .user-created{
-    background-color: #143966;
+    background-color: black;
     padding: 20px;
     border-radius: 5px;
     color: white;

@@ -9,7 +9,7 @@ header{
     padding-right: 20px;
     position: sticky;
     top: 0px;
-    background-color: #143966;
+    background-color: black;
     font-family: 'Noto Sans Linear B', sans-serif;
     color: white;
 }
@@ -24,11 +24,11 @@ a{
 }
 
 #img-header{
-    width: 80px;
+    width: 150px;
 }
 
 #cart-icon{
-    font-size: 30px;
+    font-size: 35px;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
 }
@@ -47,8 +47,8 @@ a{
     align-items: center;
     border-radius: 50%;
     position: absolute;
-    left: 18px;
-    bottom: 20px;
+    left: 23px;
+    bottom: 24px;
     font-size: 12px;
     font-weight: 900;
     border: 2px solid black;
@@ -58,10 +58,13 @@ a{
     font-family: 'Noto Sans Linear B', sans-serif;
 }
 
-ul{
+.link-list{
     display: flex;
     gap: 30px;
+    margin-right: 150px;
 }
+
+
 
 li{
     list-style: none;

@@ -38,18 +38,32 @@ body{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     border: none;
-    background-color: #143966;
+    background-color: black;
     color: white;
     border-radius: 7px;
     cursor: pointer;
 }
 
+.login-image{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
 #img-login{
-    width: 650px;
+    width: 500px;
 }
 
 .p-account{
     font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .span-register{
@@ -67,10 +81,10 @@ body{
 
 .eye-login{
     position: absolute;
-    left: 893px;
-    top: 480px;
+    left: 891px;
+    top: 418px;
     z-index: 999;
     cursor: pointer;
-    color: #143966;
+    color: black;
     font-size: 20px;
 }

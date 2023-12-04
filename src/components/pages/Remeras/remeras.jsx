@@ -1,19 +1,20 @@
 import { Fragment, useState,useEffect } from "react";
 import Header from "../../Header/header";
 import Card from "../../Card/card";
-import './welcome.css'
+import './remeras.css'
 
-function Welcome({data,cart,addToCart}) {
+function Remeras({data,cart,addToCart}) {
     
     const [loading, setLoading] = useState(true);
+    const filteredData = data.filter(prod => prod.tipo === 'Remera');
 
     useEffect(() => {
-        if (data.length === 0) {
+        if (filteredData.length === 0) {
             setLoading(true);
             return;
         }
         setLoading(false);
-    }, [data]);
+    }, [filteredData]);
 
     return ( 
         <Fragment>
@@ -25,7 +26,7 @@ function Welcome({data,cart,addToCart}) {
 
             ) : (
                 <section className="cards">
-                    {data.map((prod) => (
+                    {filteredData.map((prod) => (
                         <Card add={addToCart} prod={prod} key={prod._id} />
                     ))}
                 </section>
@@ -34,4 +35,4 @@ function Welcome({data,cart,addToCart}) {
      );
 }
 
-export default Welcome;
+export default Remeras;

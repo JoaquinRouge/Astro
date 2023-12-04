@@ -32,11 +32,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;  
-    background-color: rgb(220, 220, 224);
+    background-color: white;
     padding: 15px;
     border-radius: 7px;
     font-family: 'Noto Sans Linear B', sans-serif;
     width: 800px;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07)
+  ;
 }
 
 .titlep{
@@ -50,7 +58,7 @@
 .cart-button{
     padding: 10px;
     font-family: 'Noto Sans Linear B', sans-serif;
-    background-color: #143966;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
@@ -66,7 +74,7 @@
     position: absolute;
     left: 555px;
     top: 350px;
-    background-color: #143966;
+    background-color: black;
     padding: 30px;
     border-radius: 10px;
     color: white;
@@ -87,13 +95,21 @@
 .end-buy{
     width: 350px;
     height: 230px;
-    background-color: rgb(220, 220, 224);
+    background-color: white;
     margin: 50px;
     margin-left: 160px;
     border-radius: 7px;
     position: sticky;
     top: 120px;
     font-family: 'Noto Sans Linear B', sans-serif;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07)
+  ;
 }
 
 .end-buy-title{
@@ -130,7 +146,7 @@
     padding-left: 90px;
     padding-right: 90px;
     font-size: 14px;
-    background-color: #143966;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;

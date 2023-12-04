@@ -1,4 +1,4 @@
-import image from "../../assets/images/logo-min.png"
+import image from "../../assets/images/logo-bg-black.png"
 import { Link } from "react-router-dom";
 import "./header.css"
 
@@ -7,10 +7,11 @@ function Header({counter}) {
         <header>
             <img id="img-header" src={image} alt="logo astro" />
             <div className="header-sections">
-                <ul>
-                    <Link to="/Welcome"><li>Remeras</li></Link>
-                    <li>Pantalones</li>
-                    <li>Contacto</li>
+                <ul className="link-list">
+                    <Link to="/Remeras"><li>Remeras</li></Link>
+                    <Link to="/Buzos"><li>Buzos</li></Link>
+                    <li>Hombre</li>
+                    <li>Mujer</li>
                 </ul>
             </div>
             <div className="cart">
