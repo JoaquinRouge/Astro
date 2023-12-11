@@ -10,8 +10,8 @@ function Header({counter}) {
                 <ul className="link-list">
                     <Link to="/Remeras"><li>Remeras</li></Link>
                     <Link to="/Buzos"><li>Buzos</li></Link>
-                    <li>Hombre</li>
-                    <li>Mujer</li>
+                    <Link to="/Hombre"><li>Hombre</li></Link>
+                    <Link to="/Mujer"><li>Mujer</li></Link>
                 </ul>
             </div>
             <div className="cart">
