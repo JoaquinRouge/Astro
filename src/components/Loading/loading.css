@@ -1,76 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
-
-
-.ProductViewContainer{
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 50px;
-    background-color: white;
-    padding: 20px;
-    box-shadow:
-    0px 0px 2.2px rgba(0, 0, 0, 0.022),
-    0px 0px 5.3px rgba(0, 0, 0, 0.032),
-    0px 0px 10px rgba(0, 0, 0, 0.04),
-    0px 0px 17.9px rgba(0, 0, 0, 0.048),
-    0px 0px 33.4px rgba(0, 0, 0, 0.058),
-    0px 0px 80px rgba(0, 0, 0, 0.08)
-  ;
-}
-
-.Product-view-top{
-    display: flex;
-}
-
-.PV-texts{
-    margin-left: 50px;
-}
-
-.p{
-  font-family: 'Montserrat', sans-serif;
-}
-
-.price-pv{
-    font-size: 40px;
-}
-
-.price-pv,.category-pv,.description-pv,.stock-pv{
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.category-pv,.description-pv,.stock-pv{
-    font-size: 20px;
-}
-
-.PV-title{
-    font-size: 30px;
-}
-
-.image-pv{
-    width: 650px;
-    height: 800px;
-}
-
-.pv-button{
-    padding: 20px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    background-color: black;
-    color: white;
-}
-
-/*--------------------------------------LOADING-----------------------------------------------*/
-
-.Loading{
-    display: flex;
-    justify-content: center;
-    margin-top: 250px;
-    font-size: 50px;
-    color: #143966;
-}
-
 .lds-roller {
     display: inline-block;
     position: relative;
@@ -88,7 +15,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #143966;
+    background: black;
     margin: -4px 0 0 -4px;
   }
   .lds-roller div:nth-child(1) {

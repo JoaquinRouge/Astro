@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+.img-footer{
+    width: 200px;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.location-p{
+    font-family: 'Noto Sans Linear B', sans-serif;
+}

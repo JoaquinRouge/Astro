@@ -1,15 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { useEffect, useState } from "react";
 import Login from "../pages/Login/login";
 import Remeras from "../pages/Remeras/remeras";
 import Cart from "../pages/Cart/cart";
 import Register from "../pages/Register/register";
-import Prueba from "../pages/prueba/prueba";
 import ProductView from "../pages/Product-View/productview";
 import Buzos from "../pages/Buzos/buzos";
 import Hombre from "../pages/Hombre/hombre";
 import Mujer from "../pages/Mujer/mujer";
-
+import AddProduct from "../pages/AddProduct/addproduct";
 
 function Router() {
 
@@ -45,15 +44,15 @@ function Router() {
     return ( 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login />}></Route>
-                <Route path="/Remeras" element={<Remeras data={data} cart={cart} addToCart={addToCart} />}></Route>
+                <Route path="/" element={<Login/>}></Route>
+                <Route path="/Remeras" element={<Remeras data={data} cart={cart} />}></Route>
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
                 <Route path="/Register" element={<Register />}></Route>
-                <Route path="/prueba" element={<Prueba />}></Route>
                 <Route path="/product/:productId/:productTitle" element={<ProductView data={data} cart={cart} add={addToCart} />}></Route>
                 <Route path="/Buzos" element={<Buzos data={data} cart={cart} addToCart={addToCart} />}></Route>
                 <Route path="/Hombre" element={<Hombre data={data} cart={cart} addToCart={addToCart} />}></Route>
-                <Route path="/Mujer" element={<Mujer data={data} cart={cart} addToCart={addToCart}/>}></Route>
+                <Route path="/Mujer" element={<Mujer data={data} cart={cart} addToCart={addToCart} />}></Route>
+                <Route path="/AddProduct" element={<AddProduct/>}></Route>
             </Routes>
         </BrowserRouter>
      );

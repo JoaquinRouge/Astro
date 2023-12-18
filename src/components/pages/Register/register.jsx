@@ -1,9 +1,11 @@
-import { Fragment , useState } from "react";
+import { Fragment, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './register.css'
-import image from '../../../assets/images/logo-bg-white.png'
+import image from '../../../assets/images/logo-bg-white-removed.png'
 
 function Register() {
 
+    const navigate = useNavigate()
     const [showPwd, setShowPwd] = useState(false)
     const [userRegisterOk,setuserRegisterOk] = useState(false)
 
@@ -19,7 +21,7 @@ function Register() {
             method : "post",
             body: JSON.stringify(form),
             headers: {
-                'Content-type':"application/json"
+                'content-type':"application/json"
             }
         })
             .then((res) => console.log(res))
@@ -27,6 +29,9 @@ function Register() {
             .then(() => {
                 setuserRegisterOk(true)
                 setTimeout(()=>setuserRegisterOk(false),2000)
+            })
+            .then(() => {
+                setTimeout(()=>navigate('/'),2001)
             })
             .catch((err)=> console.log(err))
     }

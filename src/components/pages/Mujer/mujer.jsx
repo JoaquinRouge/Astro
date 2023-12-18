@@ -1,7 +1,8 @@
 import { Fragment, useState, useEffect } from "react";
 import Header from "../../Header/header";
 import Card from "../../Card/card";
-
+import Footer from "../../Footer/footer";
+import Loading from '../../Loading/loading.jsx'
 
 function Mujer({ data, cart, addToCart }) {
     
@@ -22,7 +23,7 @@ function Mujer({ data, cart, addToCart }) {
         <Header counter={cart} />
         {loading ? (
             <div className="Loading">
-                <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <Loading/>
             </div>
 
         ) : (
@@ -31,7 +32,8 @@ function Mujer({ data, cart, addToCart }) {
                     <Card add={addToCart} prod={prod} key={prod._id} />
                 ))}
             </section>
-        )}
+            )}
+            {loading ? '' : <Footer/>}
     </Fragment>
      );
 }

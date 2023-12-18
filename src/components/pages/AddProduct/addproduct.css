@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&display=swap');
+
+.addProduct-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    margin-top: 20px;
+}
+
+.form{
+    padding: 20px;
+    background-color: white;
+    box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.031),
+    0px 0px 5.3px rgba(0, 0, 0, 0.044),
+    0px 0px 10px rgba(0, 0, 0, 0.055),
+    0px 0px 17.9px rgba(0, 0, 0, 0.066),
+    0px 0px 33.4px rgba(0, 0, 0, 0.079),
+    0px 0px 80px rgba(0, 0, 0, 0.11)
+  ;
+}
+
+.input-addprod{
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    background-color: #ebebeb;
+    border: none;
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.input-addprod:focus{
+    outline: none;
+    box-shadow: 0px 0px 4px black
+}
+
+.input-addprod:focus{
+    outline: none;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+}
+
+.addprod-button{
+    width: 180px;
+    height: 40px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.file{
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+.img-astro-add-prod{
+    width: 150px;
+}

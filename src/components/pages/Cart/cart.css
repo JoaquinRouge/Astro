@@ -18,23 +18,23 @@
 }
 
 .cart-prod-img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
 }
 
 .p-price{
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .product-added{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;  
+    align-items:center;  
     background-color: white;
     padding: 15px;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 800px;
     box-shadow:
     2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -51,12 +51,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 150px;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cart-button{
     padding: 10px;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: black;
     color: white;
     border: none;
@@ -64,18 +64,18 @@
 }
 
 .quantity-prod{
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cartEmpty{
     display: flex;
     position: absolute;
-    left: 555px;
-    top: 350px;
+    left: 500px;
+    top: 300px;
     background-color: black;
     padding: 30px;
     color: white;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 450px;
     text-align: center;
 }
@@ -97,7 +97,7 @@
     margin-left: 160px;
     position: sticky;
     top: 120px;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-shadow:
     2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -127,7 +127,7 @@
     margin:8px;
     margin-left: 15px;
     margin-right: 15px;
-    font-family: 'Noto Sans Linear B', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .button-end-buy{
@@ -135,6 +135,7 @@
     justify-content: center;
     align-items: end;
     height: 60px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .end-buy-button{

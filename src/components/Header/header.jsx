@@ -1,18 +1,24 @@
-import image from "../../assets/images/logo-bg-black.png"
+import image from "../../assets/images/logo-bg-removed.png"
 import { Link } from "react-router-dom";
 import "./header.css"
+import { useState } from "react";
 
-function Header({counter}) {
+function Header({ counter }) {
+    
+    const [changeBG, setChangeBG] = useState(false)
+
     return ( 
-        <header>
+        <header onMouseOver={()=>{setChangeBG(true)}} onMouseLeave={()=>{setChangeBG(false)}} className={changeBG === true ? 'bgblack' : 'headerOver'}>
             <img id="img-header" src={image} alt="logo astro" />
             <div className="header-sections">
-                <ul className="link-list">
+                <nav>
+                    <ul className="link-list">
                     <Link to="/Remeras"><li>Remeras</li></Link>
                     <Link to="/Buzos"><li>Buzos</li></Link>
                     <Link to="/Hombre"><li>Hombre</li></Link>
                     <Link to="/Mujer"><li>Mujer</li></Link>
-                </ul>
+                    </ul>   
+                </nav>
             </div>
             <div className="cart">
                 <div className="cart-counter"><p className="cart-counter-p">{counter.length}</p></div>
