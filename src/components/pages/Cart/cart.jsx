@@ -1,7 +1,8 @@
 import { Fragment, useEffect, useState } from "react";
-import "./cart.css"
-import Header from "../../Header/header";
 import { Link } from "react-router-dom";
+import Footer from "../../Footer/footer.jsx"
+import Header from "../../Header/header";
+import "./cart.css"
 
 function Cart({ cart, removeItemFromCart, }) {
 
@@ -67,7 +68,6 @@ function Cart({ cart, removeItemFromCart, }) {
                             </div>
                                 <button className="cart-button" onClick={() => handleRemoveItem(item._id)}>Eliminar</button>
                         </div>       
-                        
                 ))}
                 </div>
                 {cart.length > 0 ?
@@ -88,7 +88,6 @@ function Cart({ cart, removeItemFromCart, }) {
                     </div>
                     : ""}
             </div>
-            
     </Fragment> );
 }
 

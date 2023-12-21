@@ -4,7 +4,7 @@ import Card from "../../Card/card";
 import Footer from "../../Footer/footer";
 import Loading from '../../Loading/loading.jsx'
 
-function Mujer({ data, cart, addToCart }) {
+function Mujer({ data, cart, addToCart, infoUsers }) {
     
     const [loading, setLoading] = useState(true);
     const filteredData = data.filter(prod => prod.category === 'Ropa de mujer');
@@ -29,7 +29,7 @@ function Mujer({ data, cart, addToCart }) {
         ) : (
             <section className="cards">
                 {filteredData.map((prod) => (
-                    <Card add={addToCart} prod={prod} key={prod._id} />
+                    <Card add={addToCart} prod={prod} key={prod._id} infoUsers={infoUsers} />
                 ))}
             </section>
             )}

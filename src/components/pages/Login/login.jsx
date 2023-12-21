@@ -3,7 +3,7 @@ import './login.css'
 import image from '../../../assets/images/logo-bg-grey-removed.png'
 import { useState } from "react";
 
-function Login() {
+function Login({userData}) {
 
     const navigate  = useNavigate()
 
@@ -25,7 +25,7 @@ function Login() {
             });
 
             const dataUsers = await response.json();
-
+            userData(dataUsers)
             if (dataUsers.user && dataUsers.token) {
                 navigate("/Remeras"); 
             }
@@ -38,8 +38,8 @@ function Login() {
             if (!dataUsers) {
                 navigate("/"); 
             }
-
             console.log(dataUsers);
+            
         } catch (error) {
             console.error("Error al realizar la solicitud:", error);
         }

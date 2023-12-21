@@ -5,7 +5,7 @@ import { Fragment ,useState, useEffect} from "react";
 import Footer from "../../Footer/footer";
 import Loading from '../../Loading/loading.jsx'
 
-function Buzos({ data, cart, addToCart}) {
+function Buzos({ data, cart, addToCart, infoUsers}) {
     
     const [loading, setLoading] = useState(true);
     const filteredData = data.filter(prod => prod.tipo === 'Buzo');
@@ -28,7 +28,7 @@ function Buzos({ data, cart, addToCart}) {
         ) : (
             <section className="cards">
                 {filteredData.map((prod) => (
-                    <Card add={addToCart} prod={prod} key={prod._id} />
+                    <Card add={addToCart} prod={prod} key={prod._id} infoUsers={infoUsers} />
                 ))}
             </section>
             )}

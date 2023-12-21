@@ -32,11 +32,6 @@
 
 .input-addprod:focus{
     outline: none;
-    box-shadow: 0px 0px 4px black
-}
-
-.input-addprod:focus{
-    outline: none;
 }
 
 .labels{
@@ -65,4 +60,15 @@
 
 .img-astro-add-prod{
     width: 150px;
+}
+
+.productAdded{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    width: 190px;
+    margin-left: 650px;
+    margin-top: 270px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }

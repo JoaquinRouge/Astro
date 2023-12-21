@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import './addproduct.css'
 import image from '../../../assets/images/logo-bg-white-removed.png'
+import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
+
+    const [productAdded,setproductAdded] = useState(false)
 
     const product = async(event) => {
         event.preventDefault()
@@ -27,53 +30,61 @@ function AddProduct() {
 
             .then((res => console.log(res)))
             .then((data) => event.target.reset())
+            .then(() => {
+                setproductAdded(true)
+                setTimeout(()=>setproductAdded(false),1200)
+            })
             .catch((err)=>console.log(err))
     }
     return ( 
         <Fragment>
-            <div className="addProduct-container">
-                <div className="form">
-                    <form action="http://localhost:4000/uploadProduct" method="post" onSubmit={(event) => product(event)}>
-                        <div className="image">
-                            <img src={image} alt="logo astro" className="img-astro-add-prod" />
-                        </div>
-                        <div className="title labels">
-                            <label htmlFor="title">Titulo del producto:</label>
-                            <input type="text" id="title" name="title" className="input-addprod" required />
-                        </div>
-                        <div className="price labels">
-                            <label htmlFor="price">Precio del producto:</label>
-                            <input type="number" id="price" name="price" className="input-addprod" required/>
-                        </div>
-                        <div className="category labels">
-                            <label htmlFor="category">Categoria:</label>
-                            <select name="category" id="category" className="input-addprod" required>
-                                <option value="Ropa de hombre">Ropa de hombre</option>
-                                <option value="Ropa de mujer">Ropa de mujer</option>
-                            </select>
-                        </div>
-                        <div className="description labels">
-                            <label htmlFor="description">Description:</label>
-                            <input type="text" id="description" name="description" className="input-addprod" required/>
-                        </div>
-                        <div className="stock labels">
-                            <label htmlFor="stock">Stock:</label>
-                            <input type="number" id="stock" name="stock" className="input-addprod" required/>
-                        </div>
-                        <div className="tipo labels">
-                            <label htmlFor="tipo">Tipo:</label>
-                            <select name="tipo" id="tipo" className="input-addprod" required>
-                                <option value="Remera">Remera</option>
-                                <option value="Buzo">Buzo</option>
-                            </select>
-                        </div>
-                        <div className="file labels">
-                            <input type="file" name="file" className="file" required />
-                        </div>
-                        <input type="submit" className="addprod-button" value="Agregar Producto" />
-                    </form>
+            {productAdded === false ? 
+                <div className="addProduct-container">
+                    <div className="form">
+                        <form action="http://localhost:4000/uploadProduct" method="post" onSubmit={(event) => product(event)}>
+                            <div className="image">
+                                <img src={image} alt="logo astro" className="img-astro-add-prod" />
+                            </div>
+                            <div className="title labels">
+                                <label htmlFor="title">Titulo del producto:</label>
+                                <input type="text" id="title" name="title" className="input-addprod" required />
+                            </div>
+                            <div className="price labels">
+                                <label htmlFor="price">Precio del producto:</label>
+                                <input type="number" id="price" name="price" className="input-addprod" required/>
+                            </div>
+                            <div className="category labels">
+                                <label htmlFor="category">Categoria:</label>
+                                <select name="category" id="category" className="input-addprod" required>
+                                    <option value="Ropa de hombre">Ropa de hombre</option>
+                                    <option value="Ropa de mujer">Ropa de mujer</option>
+                                </select>
+                            </div>
+                            <div className="description labels">
+                                <label htmlFor="description">Description:</label>
+                                <input type="text" id="description" name="description" className="input-addprod" required/>
+                            </div>
+                            <div className="stock labels">
+                                <label htmlFor="stock">Stock:</label>
+                                <input type="number" id="stock" name="stock" className="input-addprod" required/>
+                            </div>
+                            <div className="tipo labels">
+                                <label htmlFor="tipo">Tipo:</label>
+                                <select name="tipo" id="tipo" className="input-addprod" required>
+                                    <option value="Remera">Remera</option>
+                                    <option value="Buzo">Buzo</option>
+                                </select>
+                            </div>
+                            <div className="file labels">
+                                <input type="file" name="file" className="file" required />
+                            </div>
+                            <input type="submit" className="addprod-button" value="Agregar Producto" />
+                        </form>
+                    </div>
                 </div>
-            </div>
+                : <div className="productAdded">
+                    <p>¡PRODCUTO AÑADIDO!</p>
+            </div> } 
         </Fragment>
      );
 }

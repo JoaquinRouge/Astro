@@ -14,6 +14,7 @@ function Router() {
 
     const [data, setData] = useState([])
     const [cart, setCart] = useState([])
+    const [infoUsers,setInfoUsers] = useState({})
 
     useEffect(() => {
         fetch('http://localhost:4000/products')
@@ -44,14 +45,14 @@ function Router() {
     return ( 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login/>}></Route>
-                <Route path="/Remeras" element={<Remeras data={data} cart={cart} />}></Route>
+                <Route path="/" element={<Login userData={setInfoUsers}/>}></Route>
+                <Route path="/Remeras" element={<Remeras data={data} cart={cart} infoUsers={infoUsers} />}></Route>
                 <Route path="/Cart" element={<Cart cart={cart} removeItemFromCart={removeItemFromCart} />}></Route>
                 <Route path="/Register" element={<Register />}></Route>
                 <Route path="/product/:productId/:productTitle" element={<ProductView data={data} cart={cart} add={addToCart} />}></Route>
-                <Route path="/Buzos" element={<Buzos data={data} cart={cart} addToCart={addToCart} />}></Route>
-                <Route path="/Hombre" element={<Hombre data={data} cart={cart} addToCart={addToCart} />}></Route>
-                <Route path="/Mujer" element={<Mujer data={data} cart={cart} addToCart={addToCart} />}></Route>
+                <Route path="/Buzos" element={<Buzos data={data} cart={cart} addToCart={addToCart} infoUsers={infoUsers} />}></Route>
+                <Route path="/Hombre" element={<Hombre data={data} cart={cart} addToCart={addToCart} infoUsers={infoUsers} />}></Route>
+                <Route path="/Mujer" element={<Mujer data={data} cart={cart} addToCart={addToCart} infoUsers={infoUsers} />}></Route>
                 <Route path="/AddProduct" element={<AddProduct/>}></Route>
             </Routes>
         </BrowserRouter>

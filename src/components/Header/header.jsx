@@ -1,14 +1,11 @@
 import image from "../../assets/images/logo-bg-removed.png"
 import { Link } from "react-router-dom";
 import "./header.css"
-import { useState } from "react";
 
 function Header({ counter }) {
     
-    const [changeBG, setChangeBG] = useState(false)
-
     return ( 
-        <header onMouseOver={()=>{setChangeBG(true)}} onMouseLeave={()=>{setChangeBG(false)}} className={changeBG === true ? 'bgblack' : 'headerOver'}>
+        <header>
             <img id="img-header" src={image} alt="logo astro" />
             <div className="header-sections">
                 <nav>
