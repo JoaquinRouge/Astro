@@ -6,7 +6,7 @@ import Loading from "../../Loading/loading";
 import './remeras.css'
 import { Link, useNavigate } from "react-router-dom";
 
-function Remeras({data,cart,infoUsers}) {
+function Remeras({data,cart,infoUsers,setUpdater}) {
 
     const [loading, setLoading] = useState(true);
     const filteredData = data.filter(prod => prod.tipo === 'Remera');
@@ -19,6 +19,8 @@ function Remeras({data,cart,infoUsers}) {
         }
         setLoading(false);
     }, [filteredData]);
+
+    console.log(infoUsers)
 
     return ( 
         <Fragment>
@@ -36,7 +38,7 @@ function Remeras({data,cart,infoUsers}) {
             ) : (
                 <section className="cards">
                     {filteredData.map((prod) => (
-                        <Card prod={prod} key={prod._id} infoUsers={infoUsers} />
+                        <Card prod={prod} key={prod._id} infoUsers={infoUsers} setUpdater={setUpdater} />
                     ))}
                 </section>
             )}

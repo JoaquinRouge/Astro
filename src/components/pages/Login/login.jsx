@@ -26,6 +26,7 @@ function Login({userData}) {
 
             const dataUsers = await response.json();
             userData(dataUsers)
+            sessionStorage.setItem('infoUser',JSON.stringify(dataUsers))
             if (dataUsers.user && dataUsers.token) {
                 navigate("/Remeras"); 
             }

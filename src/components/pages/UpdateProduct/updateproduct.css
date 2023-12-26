@@ -1,0 +1,70 @@
+.titleNONE{
+    display: none;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form-updtprod{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.031),
+    0px 0px 5.3px rgba(0, 0, 0, 0.044),
+    0px 0px 10px rgba(0, 0, 0, 0.055),
+    0px 0px 17.9px rgba(0, 0, 0, 0.066),
+    0px 0px 33.4px rgba(0, 0, 0, 0.079),
+    0px 0px 80px rgba(0, 0, 0, 0.11)
+  ;
+  gap: 20px;
+}
+
+.input-updateProd{
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    background-color: #ebebeb;
+    border: none;
+}
+
+label{
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+.div-updt-prod{
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-updt-prod{
+    font-family: 'Noto Sans Linear B', sans-serif;
+    font-size: 10px;
+    max-width: 320px;
+}
+
+.updt-prod-submit{
+    padding: 7px;
+    width: 180px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.prEdited{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    width: 270px;
+    text-align: center;
+    margin-left: 600px;
+    margin-top: 270px;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -2,7 +2,7 @@ import "./card.css"
 import { useState, Fragment } from "react"
 import { Link } from "react-router-dom"
 
-function Card({ prod, infoUsers }) {
+function Card({ prod, infoUsers, setUpdater }) {
 
     const [showTools,setShowTools] = useState(false)
     const [deleteProduct, setDeleteProduct] = useState(false)
@@ -51,7 +51,7 @@ function Card({ prod, infoUsers }) {
                         <p className="prod-title-p">{prod.title}</p>
                         {infoUsers.user === 'admin' && infoUsers.token && showTools === true ? 
                             <div className="admin_container">
-                                    <i className="fa-solid fa-pencil icon-card"></i>
+                                    <Link to="/UpdateProduct"><i className="fa-solid fa-pencil icon-card" onClick={()=>setUpdater(prod)}></i></Link>
                                     <i className="fa-solid fa-trash icon-card" onClick={()=>setDeleteProduct(true)}></i>
                                 </div> 
                     : ""} 
