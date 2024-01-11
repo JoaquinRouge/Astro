@@ -20,8 +20,6 @@ function Remeras({data,cart,infoUsers,setUpdater}) {
         setLoading(false);
     }, [filteredData]);
 
-    console.log(infoUsers)
-
     return ( 
         <Fragment>
             <Header counter={cart} />

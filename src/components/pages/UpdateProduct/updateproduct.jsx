@@ -35,7 +35,8 @@ function UpdateProduct({ prod }) {
                 setTimeout(()=>setprodUpdated(false),2000)
             })
             .then(() => {
-                setTimeout(()=>navigate('/Remeras'),2000)
+                setTimeout(() => navigate('/Remeras'), 2000)
+                
             })
             .catch((err)=>console.log(err))
     }
